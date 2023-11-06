@@ -71,7 +71,7 @@ export default {
             if(this.from_name !== "" || this.email !== "" || this.message !== ""){
                 try {
                     await emailjs.send("service_9tk1mlb","template_d66po7d",{
-                        to_name: "Ahmed Almory",
+                        to_name: "Agnel Fernando",
                         from_name: this.from_name,
                         message: this.message,
                         reply_to: this.email,

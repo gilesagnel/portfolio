@@ -4,10 +4,10 @@
         <div><h4 class="text-base mb-2 dark:text-gray-300">{{$t('ContactMe')}}:</h4></div>
         <hr class="mb-2">
         <div class="flex space-x-1 mb-1 text-gray-500 dark:text-gray-300 xl:tracking-tight text-sm lg:text-base">
-            <h6 class="font-semibold">{{$t('Phone')}}: </h6><a class="hover:text-turquoise" href="tel:+201211779758"> {{$t('PhoneNumber')}}</a>
+            <h6 class="font-semibold">{{$t('Phone')}}: </h6><a class="hover:text-turquoise" href="tel:+17798045404"> {{$t('PhoneNumber')}}</a>
         </div>
         <div class="flex space-x-1 text-gray-500 dark:text-gray-300 xl:tracking-tight text-sm lg:text-base">
-            <h6 class="font-semibold">{{$t('Email')}}: </h6><a class="hover:text-turquoise" href="mailto:ahmedalmory02@gmail.com">ahmedalmory02@gmail.com</a>
+            <h6 class="font-semibold">{{$t('Email')}}: </h6><a class="hover:text-turquoise" href="mailto:gilesagnel@gmail.com">gilesagnel@gmail.com</a>
         </div>
     </div>
     <div>

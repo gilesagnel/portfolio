@@ -2,32 +2,15 @@
   <nav class="flex flex-nowrap justify-between items-center text-gray-700 dark:text-gray-300 xl:text-xl text-base pb-8 xl:pb-12 flex-col lg:flex-row lg:space-y-0 space-y-5">
     <div>
       <h1 @click="goToRouter('Home')" style="font-family: 'Fuggles', cursive;" class="text-6xl tracking-wider font-extralight cursor-pointer">
-        Ahmed Almory
+        Agnel Fernando
       </h1>
     </div>
     <div>
       <router-link class="pr-6 font-light hover:text-gray-500" to="/">{{$t('Home')}}</router-link>
-      <router-link class="pr-6 font-light hover:text-gray-500" to="/resume">{{$t('Resume')}}</router-link>
+      <router-link class="pr-6 font-light hover:text-gray-500" to="/">{{$t('Resume')}}</router-link>
       <button class="rounded-lg bg-turquoise dark:bg-blue-500 hover:bg-fakhti py-1 px-2 lg:py-2 lg:px-4 text-sm lg:text-base text-white font-semibold" @click="goToRouter('Contact')">
         {{$t('Contact')}}
       </button>
-      <v-drop-down ref="dropDown" class="ml-8">
-          <div slot="trigger">
-            <flag class="text-xl" :iso="choosenLanguage" />
-            <i class="fas fa-chevron-down ml-2"></i>
-          </div>
-          <div slot="menu" class="dark:bg-gray-800">
-            <div class="flex items-center space-x-2 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 px-6 py-2"
-              v-for="(language, index) in languages"
-              :key="index"
-              @click="changeLocale(index)">
-              <div>
-                <flag class="text-lg" :iso="language.flag" />
-              </div>
-              <div class="text-xs lg:text-sm">{{ $t(language.title) }}</div>
-            </div>
-          </div>
-      </v-drop-down>
 
       <i v-if="!isDarkMode" @click="ToogleDarkMode" class="fas fa-moon ml-6 cursor-pointer border px-2 py-1 rounded-xl"></i>
       <i v-else @click="ToogleDarkMode" class="fas fa-sun ml-6 cursor-pointer text-yellow-500 border px-2 py-1 rounded-xl"></i>
@@ -39,11 +22,9 @@
 
 <script>
 import i18n from "../i18n/index.js"
-import VDropDown from "./DropDown.vue";
 
 export default {
     name:'VNavbar',
-    components:{VDropDown},
     data(){
       return{
         IamNotInHome: true,

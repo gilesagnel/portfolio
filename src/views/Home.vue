@@ -17,7 +17,7 @@
         </div>
         
         <!-- See my resume -->
-        <a href="https://drive.google.com/file/d/148xtF-Ufk3Rc2OqPNL-MNyIA5B8ap61U/view?usp=sharing" target="_blank" class="text-xs lg:text-base bg-transparent w-full 2xl:w-1/3 hover:bg-turquoise font-semibold uppercase text-center hover:text-white dark:text-gray-400 dark:hover:text-white py-2 px-8 border border-turquoise hover:border-transparent rounded">
+        <a href="https://drive.google.com/file/d/1VHDHu_xU1CDoMm4KQY1y1AnIdpke2_Vm/view?usp=sharing" target="_blank" class="text-xs lg:text-base bg-transparent w-full 2xl:w-1/3 hover:bg-turquoise font-semibold uppercase text-center hover:text-white dark:text-gray-400 dark:hover:text-white py-2 px-8 border border-turquoise hover:border-transparent rounded">
           {{$t('seeResume')}}
         </a>
 
@@ -26,7 +26,7 @@
         
       </div>
       <div class="flex-1">
-        <img class="2xl:w-5/6 w-full slit-in-diagonal-1 rounded-lg" src="../assets/ahmed.jpg" alt="Ahmed"/>
+        <img class="2xl:w-5/6 w-full slit-in-diagonal-1 rounded-lg" src="../assets/agnel.jpg" alt="Agnel"/>
       </div>
     </section>
 
@@ -35,15 +35,15 @@
       <div><a href="#skills"><i class="fas fa-chevron-down"></i></a></div>
     </div>
 
-    <!-- Skills Section -->
+    <!-- Skills Section 
     <section id="skills" >
       <skills/>
     </section>
 
-    <!-- Projects Section -->
+    Projects Section 
     <section >
       <projects/>
-    </section>
+    </section> -->
 
     <!-- Chat with me -->
     <chat-with-me/>
@@ -58,15 +58,13 @@
 <script>
 import {mapGetters} from 'vuex'
 // import typical from "vue-typical"
-import skills from "../components/Skills.vue"
 import VLinks from '../components/links.vue'
 import ScrollToTop from '../components/ScrollToTop.vue'
 import ChatWithMe from '../components/ChatWithMe.vue'
-import Projects from '../components/Projects.vue'
 
 export default {
   name: "Home",
-  components: {skills, VLinks, ScrollToTop, ChatWithMe, Projects},
+  components: {VLinks, ScrollToTop, ChatWithMe},
   data() {
     return {};
   },
