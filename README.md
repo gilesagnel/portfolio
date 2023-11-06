@@ -1,7 +1,7 @@
 ## Portfolio
 
 My Portfolio repositry to show my skills and projects.
-Take a look on [ahmedalmory.github.io/portfolio](https://ahmedalmory.github.io/portfolio)
+Take a look on [ahmedalmory.github.io/portfolio](https://gilesagnel.github.io/portfolio)
 
 ## Built with
 
