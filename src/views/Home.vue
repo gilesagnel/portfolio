@@ -43,10 +43,10 @@
     Projects Section 
     <section >
       <projects/>
-    </section> -->
+    </section> 
 
-    <!-- Chat with me -->
-    <chat-with-me/>
+   Chat with me 
+    <chat-with-me/> -->
 
     <!-- Scroll To Top btn -->
     <scroll-to-top ref="scrollTop" />
@@ -60,11 +60,10 @@ import {mapGetters} from 'vuex'
 // import typical from "vue-typical"
 import VLinks from '../components/links.vue'
 import ScrollToTop from '../components/ScrollToTop.vue'
-import ChatWithMe from '../components/ChatWithMe.vue'
 
 export default {
   name: "Home",
-  components: {VLinks, ScrollToTop, ChatWithMe},
+  components: {VLinks, ScrollToTop},
   data() {
     return {};
   },
