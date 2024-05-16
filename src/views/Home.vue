@@ -1,23 +1,21 @@
 <template>
   <div>
-    
-    <section id="home" class="flex flex-col-reverse md:flex-row justify-center items-center xl:space-x-44 lg:space-x-24 sm:space-x-8 xl:p-12  mx-auto">
-      <div class="flex-1 flex flex-col space-y-4">
+    <section id="home" class="flex flex-col-reverse md:flex-row justify-left xl:space-x-54 lg:space-x-34 sm:space-x-12 xl:p-8  mx-auto">
+      <div class="w-2/3 flex flex-col space-y-4 pr-60">
         <div class="mt-4 xl:mt-0">
-          <h2 class="2xl:text-2xl lg:text-2xl md:text-lg focus-in-expand dark:text-gray-300">
-            {{$t('Hello')}}
-            <span class="text-fakhti text-3xl lg:text-4xl tracking-normal font-bold focus-in-expand hover:text-turquoise">{{$t('myName')}}</span>
+          <h2 class="3xl:text-2xl text-greenBlue">
+            <span class="text-white lg:text-5xl tracking-normal font-bold">{{$t('myName')}}</span>
           </h2>
         </div>
         <div>
-          <h1 class="text-turquoise text-4xl 2xl:text-6xl tracking-normal font-extrabold focus-in-expand hover:text-fakhti">{{ $t('job') }}</h1>
+          <h3 class="text-greenBlue text-3xl 2xl:text-6xl tracking-normal focus-in-expand ">{{ $t('job') }}</h3>
         </div>
         <div>
-          <p class="text-sm lg:text-base leading-loose tracking-relaxed lg:leading-loose lg:tracking-relaxed text-gray-500 dark:text-gray-300 whitespace-pre-line" :class="this.$i18n.locale == 'ar' ? 'text-right' : 'text-left'">{{$t('Aboutme')}}</p>
+          <p class="text-sm lg:text-base leading-loose tracking-relaxed lg:leading-loose lg:tracking-relaxed text-slateGray whitespace-pre-line" >{{$t('Aboutme')}}</p>
         </div>
         
         <!-- See my resume -->
-        <a href="https://drive.google.com/file/d/1VHDHu_xU1CDoMm4KQY1y1AnIdpke2_Vm/view?usp=sharing" target="_blank" class="text-xs lg:text-base bg-transparent w-full 2xl:w-1/3 hover:bg-turquoise font-semibold uppercase text-center hover:text-white dark:text-gray-400 dark:hover:text-white py-2 px-8 border border-turquoise hover:border-transparent rounded">
+        <a href="https://drive.google.com/file/d/15yHJjoG8r2xnRB1i7hS9qlHPhuvbWs_2/view?usp=sharing" target="_blank" class="text-xs text-white lg:text-base bg-transparent w-full 2xl:w-1/3 hover:bg-greenBlue font-semibold uppercase text-center hover:text-white py-2 px-8 border border-white hover:border-transparent rounded">
           {{$t('seeResume')}}
         </a>
 
@@ -25,31 +23,27 @@
         <v-links/>
         
       </div>
-      <div class="flex-1">
-        <img class="2xl:w-5/6 w-full slit-in-diagonal-1 rounded-lg" src="../assets/agnel.jpg" alt="Agnel"/>
+      <div class="w-1/3">
+        <img class="2xl:w-2/3 slit-in-diagonal-1 rounded-lg" src="../assets/agnel.jpg" alt="Agnel"/>
       </div>
     </section>
 
     <!-- Scroll down -->
-    <div class="flex justify-center items-center animate-bounce text-2xl text-gray-500 py-4">
-      <div><a href="#skills"><i class="fas fa-chevron-down"></i></a></div>
+    <div class="flex justify-center items-center text-2xl text-gray-500 py-6">
+      <!-- <div><a href="#skills"><i class="fas fa-chevron-down"></i></a></div> -->
     </div>
 
-    <!-- Skills Section 
-    <section id="skills" >
-      <skills/>
-    </section>
+    <div id="aboutme" class="py-6">
+      <AboutMe />
+    </div>
 
-    Projects Section 
-    <section >
-      <projects/>
-    </section> 
+    <!-- Skills Section -->
+    <!-- <section id="skills" >
+      <Skills/>
+    </section> -->
 
-   Chat with me 
-    <chat-with-me/> -->
 
-    <!-- Scroll To Top btn -->
-    <scroll-to-top ref="scrollTop" />
+    <!-- <scroll-to-top ref="scrollTop" /> -->
 
   </div>
 </template>
@@ -59,11 +53,13 @@
 import {mapGetters} from 'vuex'
 // import typical from "vue-typical"
 import VLinks from '../components/links.vue'
-import ScrollToTop from '../components/ScrollToTop.vue'
+// import ScrollToTop from '../components/ScrollToTop.vue'
+// import Skills from '../components/Skills.vue'
+import AboutMe from '../components/AboutMe.vue'
 
 export default {
   name: "Home",
-  components: {VLinks, ScrollToTop},
+  components: {VLinks, AboutMe},
   data() {
     return {};
   },

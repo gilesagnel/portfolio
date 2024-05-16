@@ -9,7 +9,10 @@ module.exports = {
         coolGray : colors.coolGray,
         blueGray : colors.blueGray,
         'fakhti' : '#dd6e42',
-        'turquoise': '#119da4'
+        'turquoise': '#119da4',
+        'jet': "#2e2d2b",
+        'greenBlue':'#0563bb',
+        'slateGray':'#74808a'
       },
       textOpacity: ['dark']
     },

@@ -1,18 +1,18 @@
 <template class="dark font-sans">
-  <div id="app" class="bg-gray-50 text-gray-800 dark:bg-coolGray-800 " :class="this.$i18n.locale == 'ar' ? 'text-right' : ''">
-    <div class="container mx-auto px-12 p-4 pt-6">
-      <v-navbar />
+  <div id="app" class="bg-jet">
+    <div class="container mx-auto pt-6 w-full max-width=100%">
+      <!-- <v-navbar /> -->
       <router-view />
     </div>
-    <v-footer/>
+    <!-- <v-footer/> -->
   </div>
 </template>
 
 <script>
-import VNavbar from "./components/Navbar.vue";
-import VFooter from "./components/Footer.vue"
+// import VNavbar from "./components/Navbar.vue";
+// import VFooter from "./components/Footer.vue"
 export default {
-  components: { VNavbar, VFooter}
+  // components: { VFooter }
 };
 </script>
 
