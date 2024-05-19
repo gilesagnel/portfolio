@@ -12,7 +12,8 @@ module.exports = {
         'turquoise': '#119da4',
         'jet': "#2e2d2b",
         'greenBlue':'#0563bb',
-        'slateGray':'#74808a'
+        'slateGray':'#74808a',
+        'flashWhite': "#edefee"
       },
       textOpacity: ['dark']
     },

@@ -28,19 +28,11 @@
       </div>
     </section>
 
-    <!-- Scroll down -->
-    <div class="flex justify-center items-center text-2xl text-gray-500 py-6">
-      <!-- <div><a href="#skills"><i class="fas fa-chevron-down"></i></a></div> -->
-    </div>
-
-    <div id="aboutme" class="py-6">
-      <AboutMe />
-    </div>
 
     <!-- Skills Section -->
-    <!-- <section id="skills" >
+    <section id="skills" >
       <Skills/>
-    </section> -->
+    </section>
 
 
     <!-- <scroll-to-top ref="scrollTop" /> -->
@@ -54,12 +46,11 @@ import {mapGetters} from 'vuex'
 // import typical from "vue-typical"
 import VLinks from '../components/links.vue'
 // import ScrollToTop from '../components/ScrollToTop.vue'
-// import Skills from '../components/Skills.vue'
-import AboutMe from '../components/AboutMe.vue'
+import Skills from '../components/Skills.vue'
 
 export default {
   name: "Home",
-  components: {VLinks, AboutMe},
+  components: {VLinks, Skills},
   data() {
     return {};
   },

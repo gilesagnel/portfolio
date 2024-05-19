@@ -1,74 +1,92 @@
 <template>
   <div>
-    <h1 class="text-center text-gray-800 dark:text-gray-300 pb-20 text-5xl font-extrabold">
-      {{$t('iwork')}}
-    </h1>
-    <carousel
-      :perPageCustom="[[320, 1],[900, 3], [1199, 4]]"
-      :mouse-drag="true"
-      :autoplay="true"
-      :paginationSize="0"
-      :loop="true"
-      :speed="800"
-      :autoplayTimeout="3000"
-      :autoplayHoverPause="false"
-    >
-      <slide v-for="(skill, index) in skills" :key="index">
-        <div class="rounded-full flex flex-col items-center justify-center bg-white dark:bg-gray-700 p-8 w-48 h-48 lg:w-52 lg:h-52 mx-6 space-y-6">
-          <img class="w-1/2" :src="skill.image" />
-          <h1 class="text-base dark:text-gray-300">{{ skill.name }}</h1>
+      <div class="section-title flex flex-col mt-20 mb-16">
+          <div class="text-center text-white text-5xl font-bold">
+              SKILLS
+          </div>
+          <div class="flex justify-center">
+              <div class="mt-3 w-12 h-0.5 bg-white text-center" />
+              <div class="mt-3 w-12 h-0.5 bg-greenBlue text-center" />
+              <div class="mt-3 w-12 h-0.5 bg-white text-center" />
+          </div>
+      </div>
+      <div class="tabs flex justify-center mb-16">
+          <button 
+            v-for="(tab, index) in tabs" 
+            :key="index"
+            :class="['px-4 py-2', selectedTab === tab ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700']"
+            @click="selectedTab = tab"
+          >
+            {{ tab }}
+          </button>
         </div>
-      </slide>
-    </carousel>
+
+      <div class="container flex flex-wrap gap-10">
+          <div v-for="(skill, index) in filteredSkills" :key="index">
+              <div class="flex flex-row items-center bg-flashWhite p-6 w-24 h-24 lg:w-32 lg:h-32 mx-6 mb-2 rounded-lg">
+                  <img :src="skill.image" />
+              </div>
+              <div class="text-center text-flashWhite">{{skill.name}}</div>
+          </div>
+      </div>
   </div>
 </template>
-
-
 <script>
-import { Carousel, Slide } from 'vue-carousel'
-
 export default {
-    name:'Skills',
-    components: { Carousel, Slide },
-    data(){
-        return{
-            skills: [
-                {name: 'Python', image: require("../assets/images/skills/python.png")},
-                {name: 'PHP', image: require("../assets/images/skills/php.png")},
-                {name: 'Bash', image: require("../assets/images/skills/bash.png")},
-                { name: "JavaScript", image: require("../assets/images/skills/javascript.png")},
-                { name: "TypeScript", image: require("../assets/images/skills/typescript.png")},
-                { name: "SQL", image: require("../assets/images/skills/mysql.png")},
-                { name: "HTML", image: require("../assets/images/skills/html.png")},
-                { name: "CSS", image: require("../assets/images/skills/css.png")},
+  name: "Skills1",
+  data() {
+      return {
+          selectedTab: 'All',
+          tabs: ['All', 'AI/ML', 'Robotics', 'App Dev', 'DevOps & Cloud'],
+          skills: [
+              { name: 'Python', category: "AI/ML", image: require("../assets/images/skills/python.png") },
+              { name: 'Pytorch', category: "AI/ML", image: require("../assets/images/skills/pytorch.svg") },
+              { name: 'Tensorflow', category: "AI/ML", image: require("../assets/images/skills/tensorflow.png") },
+              { name: 'Scikit-learn', category: "AI/ML", image: require("../assets/images/skills/scikit_learn.png") },
+              { name: 'TorchVision', category: "AI/ML", image: require("../assets/images/skills/torchvision.png") },
+              { name: 'OpenCV', category: "AI/ML", image: require("../assets/images/skills/opencv.png") },
+              { name: 'Computer Vision', category: "AI/ML", image: require("../assets/images/skills/computer_vision.svg") },
+              { name: 'Object Detection', category: "AI/ML", image: require("../assets/images/skills/object_detection.svg") },
+              { name: 'Generative Models', category: "AI/ML", image: require("../assets/images/skills/generative-models.svg") },
+              { name: 'Deep RL', category: "AI/ML", image: require("../assets/images/skills/rl.svg") },
+              { name: 'NLP', category: "AI/ML", image: require("../assets/images/skills/nlp.svg") },
+              { name: 'MatLab', category: "AI/ML", image: require("../assets/images/skills/matlab.png")},
 
-                { name: "Laravel", image: require("../assets/images/skills/laravel.png")},
-                { name: "Django", image: require("../assets/images/skills/django.png")},
-                { name: "Express.js", image: require("../assets/images/skills/expressjs.png")},
-                { name: "Symfony", image: require("../assets/images/skills/symfony.png")},
-                { name: "Livewire", image: require("../assets/images/skills/livewire.png")},
-                { name: "Vue JS", image: require("../assets/images/skills/vue.png")},
-                { name: "Alpine.js", image: require("../assets/images/skills/alpine.png")},
-                { name: "React JS", image: require("../assets/images/skills/reactjs.png")},
-                { name: "Bootstrap", image: require("../assets/images/skills/bootstrap.png")},
-                { name: "Tailwind CSS", image: require("../assets/images/skills/tailwind.png")},
 
-                { name: "Git", image: require("../assets/images/skills/git.png")},
-                { name: "composer", image: require("../assets/images/skills/composer.png")},
-                { name: "Docker", image: require("../assets/images/skills/docker.png")},
-                { name: "Vim", image: require("../assets/images/skills/vim.png")},
-                { name: "npm", image: require("../assets/images/skills/npm.png")},
+              { name: 'ROS', category: "Robotics", image: require("../assets/images/skills/ros.png") },
+              { name: 'Gazebo', category: "Robotics", image: require("../assets/images/skills/gazebo.png") },
+              { name: 'Unity', category: "Robotics", image: require("../assets/images/skills/unity.png") },
+              
+              { name: 'Java', category: "App Dev", image: require("../assets/images/skills/java.svg")},
+              { name: "JavaScript", category: "App Dev", image: require("../assets/images/skills/javascript.png")},
+              { name: "HTML", category: "App Dev", image: require("../assets/images/skills/html.png")},
+              { name: "CSS", category: "App Dev", image: require("../assets/images/skills/css.png")},
+              { name: "Spring Boot", category: "App Dev", image: require("../assets/images/skills/springboot.png")},
+              { name: "Microservice", category: "App Dev", image: require("../assets/images/skills/microservice.svg")},
+              { name: "Hibernate", category: "App Dev", image: require("../assets/images/skills/hibernate.png")},
+              { name: "Vue JS", category: "App Dev", image: require("../assets/images/skills/vue.png")},
+              { name: "Angular", category: "App Dev", image: require("../assets/images/skills/angular.png")},
+              { name: "MySQL", category: "App Dev", image: require("../assets/images/skills/mysql.png")},
+              { name: "Dynamo DB", category: "App Dev", image: require("../assets/images/skills/dynamodb.png")},
+              { name: "Kotlin", category: "App Dev", image: require("../assets/images/skills/kotlin.png")},
+              { name: "Android", category: "App Dev", image: require("../assets/images/skills/android.png")},              
 
-                { name: "PHPUnit", image: require("../assets/images/skills/phpunit.png")},
-
-                { name: "Linux", image: require("../assets/images/skills/linux.png")},
-                { name: "Node JS", image: require("../assets/images/skills/nodejs.png")},
-                { name: "AWS", image: require("../assets/images/skills/aws.png")},
-                { name: "Digital Ocean", image: require("../assets/images/skills/digital_ocean.png")},
-                { name: "Heroku", image: require("../assets/images/skills/heroku.png")},
-                { name: "Mongo DB", image: require("../assets/images/skills/mongo_db.png")},
-            ],
-        }
+              { name: "Docker", category: "DevOps & Cloud", image: require("../assets/images/skills/docker.png")},
+              { name: "AWS", category: "DevOps & Cloud", image: require("../assets/images/skills/aws.png")},
+              { name: "Azure", category: "DevOps & Cloud", image: require("../assets/images/skills/azure.svg")},
+              { name: "Linux", category: "Others", image: require("../assets/images/skills/linux.png")},
+              { name: "Ubunutu", category: "Others", image: require("../assets/images/skills/ubuntu.png")},
+              
+          ],
+      }
+  },
+  computed: {
+  filteredSkills() {
+    if (this.selectedTab === 'All') {
+      return this.skills;
     }
+    return this.skills.filter(skill => skill.category === this.selectedTab);
+  },
+}
 };
 </script>
