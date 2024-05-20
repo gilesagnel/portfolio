@@ -36,7 +36,7 @@ export default {
   name: "Skills1",
   data() {
       return {
-          selectedTab: 'All',
+          selectedTab: 'AI/ML',
           tabs: ['All', 'AI/ML', 'Robotics', 'App Dev', 'DevOps & Cloud'],
           skills: [
               { name: 'Python', category: "AI/ML", image: require("../assets/images/skills/python.png") },
