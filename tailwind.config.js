@@ -8,12 +8,15 @@ module.exports = {
       colors: {
         coolGray : colors.coolGray,
         blueGray : colors.blueGray,
-        'fakhti' : '#dd6e42',
-        'turquoise': '#119da4',
         'jet': "#2e2d2b",
         'greenBlue':'#0563bb',
         'slateGray':'#74808a',
-        'flashWhite': "#edefee"
+        'flashWhite': "#edefee",
+        'mayaBlue': '#7BBDFC',
+        'silver':'#BDBDBD',
+        'jetLight':'#3a3838',
+        'whiteLight':'#fcfcfc52',
+        'emerald':'#0cce6b'
       },
       textOpacity: ['dark']
     },

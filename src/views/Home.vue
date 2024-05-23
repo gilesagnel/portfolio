@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section id="home" class="flex flex-col-reverse md:flex-row justify-left xl:space-x-54 lg:space-x-34 sm:space-x-12 xl:p-8  mx-auto">
+    <section id="home" class="flex flex-col-reverse md:flex-row justify-left xl:space-x-54 lg:space-x-34 sm:space-x-12 xl:p-8  mx-auto mb-10">
       <div class="w-2/3 flex flex-col space-y-4 pr-60">
         <div class="mt-4 xl:mt-0">
           <h2 class="3xl:text-2xl text-greenBlue">
@@ -30,12 +30,17 @@
 
 
     <!-- Skills Section -->
-    <section id="skills" >
+    <section id="skills" class="my-32">
       <Skills/>
     </section>
 
+    <section id="timeline" class="my-32" >
+      <Timeline />
+    </section>
 
-    <!-- <scroll-to-top ref="scrollTop" /> -->
+    <section id="projects" class="my-32" >
+      <Projects />
+    </section>
 
   </div>
 </template>
@@ -43,16 +48,74 @@
 
 <script>
 import {mapGetters} from 'vuex'
-// import typical from "vue-typical"
 import VLinks from '../components/links.vue'
-// import ScrollToTop from '../components/ScrollToTop.vue'
 import Skills from '../components/Skills.vue'
+import Timeline from '../components/Timeline.vue';
+import Projects from '../components/Projects.vue';
 
 export default {
   name: "Home",
-  components: {VLinks, Skills},
+  components: {VLinks, Skills, Timeline, Projects},
   data() {
-    return {};
+    return {
+      dataTimeline: [
+      {
+        from: new Date(2017, 5, 22),
+        title: "Name",
+        showDayAndMonth: true,
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde."
+      },
+      {
+        from: new Date(2017, 8),
+        title: "Name",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde."
+      },
+      {
+        from: new Date(2016, 11),
+        title: "Name",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde."
+      },
+      {
+        from: new Date(2018, 7, 19),
+        title: "Name",
+        showDayAndMonth: true,
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde."
+      },
+      {
+        from: new Date(2016, 1),
+        title: "Name",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde."
+      },
+      {
+        from: new Date(2016, 6),
+        title: "Name",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde."
+      },
+      {
+        from: new Date(2013, 1),
+        title: "Name",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde."
+      },
+      {
+        from: new Date(2015, 1),
+        title: "Name",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde."
+      },
+      {
+        from: new Date(2012, 1),
+        title: "Name",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde."
+      }]
+    };
   },
   computed:{
     ...mapGetters({isTranslated: 'isTranslated'})
@@ -120,4 +183,4 @@ export default {
 .focus-in-expand {
   animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-</style>
+</style>../components/Timeline.vue

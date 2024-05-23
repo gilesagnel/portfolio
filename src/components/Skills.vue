@@ -1,15 +1,6 @@
 <template>
   <div>
-      <div class="section-title flex flex-col mt-20 mb-16">
-          <div class="text-center text-white text-5xl font-bold">
-              SKILLS
-          </div>
-          <div class="flex justify-center">
-              <div class="mt-3 w-12 h-0.5 bg-white text-center" />
-              <div class="mt-3 w-12 h-0.5 bg-greenBlue text-center" />
-              <div class="mt-3 w-12 h-0.5 bg-white text-center" />
-          </div>
-      </div>
+      <Title titlename="SKILLS"/>
       <div class="tabs flex justify-center mb-16">
           <button 
             v-for="(tab, index) in tabs" 
@@ -32,8 +23,11 @@
   </div>
 </template>
 <script>
+import Title from './Title.vue';
+
 export default {
-  name: "Skills1",
+  name: "Skills",
+  components: {Title},
   data() {
       return {
           selectedTab: 'AI/ML',
