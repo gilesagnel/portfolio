@@ -1,7 +1,7 @@
 <template>
     <div>
         <Title titlename="Projects" />
-        <div class="flex container">
+        <div class="flex container flex-wrap">
             <div v-for="(project, index) in projects" :key="index" class="flex flex-col w-1/3 h-1/3 m-6 bg-white shadow rounded-lg">
                 <div class="flex justify-between">
                     <h3 class="text-xl px-5 py-3 text-emerald">{{ project.name }}</h3>
@@ -12,9 +12,9 @@
                     <img :src="project.image" />
                 </div>
                 <p class="mx-3 my-6">{{ project.description }}</p>
-                <div class="flex mx-3 my-6">
+                <div class="flex flex-wrap m-3">
                     <div v-for="(tech, ti) in project.technologies" :key="ti"
-                        class="flex items-center rounded-full bg-greenBlue shadow-lg shadow-greenBlue px-3 py-1 mx-1.5 text-xs font-medium leading-5 text-white">
+                        class="flex items-center rounded-full bg-greenBlue shadow-lg shadow-greenBlue px-3 py-1 m-1.5 text-xs font-medium leading-5 text-white">
                         {{ tech }}
                     </div>
                 </div>
@@ -39,14 +39,29 @@ export default {
                     link: 'https://github.com/gilesagnel/CycleGan',
                     image: require('../assets/images/projects/cycleGan.png'),
                     description: 'Implementation of CycleGan in Pytorch',
-                    technologies: ['Pytorch', 'Python', 'bash']
+                    technologies: ['Pytorch', 'Python', 'Computer Vision', 'Generative Model']
                 },
                 {
                     name: 'Seed Image Classification',
                     link: 'https://github.com/gilesagnel/FGIC',
                     image: require('../assets/images/projects/seeds.png'),
                     description: 'Fine-Grained Image Classification for Seed Images',
-                    technologies: ['Pytorch', 'Python', 'bash']
+                    technologies: ['Pytorch', 'Python', 'Computer Vision']
+                },
+                {
+                    name: 'Student Dropout Prediction',
+                    link: 'https://github.com/gilesagnel/StudentDropoutML',
+                    image: require('../assets/images/projects/dropout.jpeg'),
+                    description: 'The machine learning model will predict whether a student will drop out of the course based on the given data.',
+                    technologies: ['Scikit-learn', 'Python', 'Jupyter']
+                },
+                {
+                    name: 'Trajectory Following',
+                    link: 'https://github.com/gilesagnel/TrajectoryFollowing',
+                    image: require('../assets/images/projects/tf.png'),
+                    description: 'Trajectory Following Robot use deep reinforcement learning',
+                    technologies: ['Pytorch', 'Python', 'Reinforcement Learning', 'Deep Learning', 'ROS',
+                                  'Gazebo']
                 },
                 // Add more projects as needed
             ]

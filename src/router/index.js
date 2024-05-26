@@ -14,16 +14,6 @@ const routes = [
     component: page('Home')
   },
   {
-    path: '/resume',
-    name: 'Resume',
-    component: page('Resume')
-  },
-  {
-    path: '/contact',
-    name: 'Contact',
-    component: page('Contact')
-  },
-  {
     path: '*',
     name: '404',
     component: page('404')
