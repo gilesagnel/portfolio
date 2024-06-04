@@ -43,7 +43,7 @@ export default {
                 },
                 {
                     name: 'Seed Image Classification',
-                    link: 'https://github.com/gilesagnel/FGIC',
+                    link: 'https://github.com/gilesagnel/FGVC',
                     image: require('../assets/images/projects/seeds.png'),
                     description: 'Fine-Grained Image Classification for Seed Images',
                     technologies: ['Pytorch', 'Python', 'Computer Vision']
