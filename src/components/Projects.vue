@@ -63,6 +63,20 @@ export default {
                     technologies: ['Pytorch', 'Python', 'Reinforcement Learning', 'Deep Learning', 'ROS',
                                   'Gazebo']
                 },
+                {
+                    name: 'Mountain Climping',
+                    link: 'https://github.com/gilesagnel/DRL-games',
+                    image: require('../assets/images/projects/mountain_car.png'),
+                    description: 'Play the Mountain Climbing game using Hindsight Experience Replay (HER) and Deep Q-Network (DQN)',
+                    technologies: ['Pytorch', 'Python', 'Reinforcement Learning', 'Deep Learning']
+                },
+                {
+                    name: 'Breakout',
+                    link: 'https://github.com/gilesagnel/DRL-games',
+                    image: require('../assets/images/projects/breakout.png'),
+                    description: 'Play the Atari Breakout game using a Deep Q-Network (DQN)',
+                    technologies: ['Pytorch', 'Python', 'Reinforcement Learning', 'Deep Learning']
+                },
                 // Add more projects as needed
             ]
         };
