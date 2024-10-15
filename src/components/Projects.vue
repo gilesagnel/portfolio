@@ -35,33 +35,11 @@ export default {
         return {
             projects: [
                 {
-                    name: 'CycleGan',
-                    link: 'https://github.com/gilesagnel/CycleGan',
-                    image: require('../assets/images/projects/cycleGan.png'),
-                    description: 'Implementation of CycleGan in Pytorch',
-                    technologies: ['Pytorch', 'Python', 'Computer Vision', 'Generative Model']
-                },
-                {
                     name: 'Seed Image Classification',
                     link: 'https://github.com/gilesagnel/FGVC',
                     image: require('../assets/images/projects/seeds.png'),
                     description: 'Fine-Grained Image Classification for Seed Images',
                     technologies: ['Pytorch', 'Python', 'Computer Vision']
-                },
-                {
-                    name: 'Student Dropout Prediction',
-                    link: 'https://github.com/gilesagnel/StudentDropoutML',
-                    image: require('../assets/images/projects/dropout.jpeg'),
-                    description: 'The machine learning model will predict whether a student will drop out of the course based on the given data.',
-                    technologies: ['Scikit-learn', 'Python', 'Jupyter']
-                },
-                {
-                    name: 'Trajectory Following',
-                    link: 'https://github.com/gilesagnel/TrajectoryFollowing',
-                    image: require('../assets/images/projects/tf.png'),
-                    description: 'Trajectory Following Robot use deep reinforcement learning',
-                    technologies: ['Pytorch', 'Python', 'Reinforcement Learning', 'Deep Learning', 'ROS',
-                                  'Gazebo']
                 },
                 {
                     name: 'Mountain Climping',
@@ -77,6 +55,28 @@ export default {
                     description: 'Play the Atari Breakout game using a Deep Q-Network (DQN)',
                     technologies: ['Pytorch', 'Python', 'Reinforcement Learning', 'Deep Learning']
                 },
+                {
+                    name: 'Trajectory Following',
+                    link: 'https://github.com/gilesagnel/TrajectoryFollowing',
+                    image: require('../assets/images/projects/tf.png'),
+                    description: 'Trajectory Following Robot use deep reinforcement learning',
+                    technologies: ['Pytorch', 'Python', 'Reinforcement Learning', 'Deep Learning', 'ROS',
+                                  'Gazebo']
+                },
+                {
+                    name: 'Student Dropout Prediction',
+                    link: 'https://github.com/gilesagnel/StudentDropoutML',
+                    image: require('../assets/images/projects/dropout.jpeg'),
+                    description: 'The machine learning model will predict whether a student will drop out of the course based on the given data.',
+                    technologies: ['Scikit-learn', 'Python', 'Jupyter']
+                },
+                {
+                    name: 'CycleGan',
+                    link: 'https://github.com/gilesagnel/CycleGan',
+                    image: require('../assets/images/projects/cycleGan.png'),
+                    description: 'Implementation of CycleGan in Pytorch',
+                    technologies: ['Pytorch', 'Python', 'Computer Vision', 'Generative Model']
+                }
                 // Add more projects as needed
             ]
         };

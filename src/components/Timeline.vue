@@ -59,7 +59,7 @@ export default {
                   </ul>`, type: 'exp', link: "https://www.bazaarvoice.com/"
         },
         { title: 'Depaul University', subtitle: 'MS in Artificial Intelligence', date: 'Aug 2023 - Present', description: `Currently pursuing a Master's degree in Artificial Intelligence, with a focus on Deep Reinforcement Learning and Computer Vision.`, type: 'edu', link: "https://www.depaul.edu/" },
-      ],
+      ].reverse(),
     };
   },
   methods: {
