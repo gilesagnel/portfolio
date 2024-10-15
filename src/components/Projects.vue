@@ -1,8 +1,8 @@
 <template>
     <div>
         <Title titlename="Projects" />
-        <div class="flex container flex-wrap">
-            <div v-for="(project, index) in projects" :key="index" class="flex flex-col w-1/3 h-1/3 m-6 bg-white shadow rounded-lg">
+        <div class="flex container flex-wrap justify-center">
+            <div v-for="(project, index) in projects" :key="index" class="flex flex-col w-2/5 h-1/3 m-6 bg-white shadow rounded-lg">
                 <div class="flex justify-between">
                     <h3 class="text-xl px-5 py-3 text-emerald">{{ project.name }}</h3>
                     <a :href="project.link" target="_blank" class="self-center mr-2">
