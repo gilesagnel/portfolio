@@ -1,4 +1,4 @@
 ## Portfolio
 
-My Portfolio repositry to show my skills and projects.
-Take a look on [gilesagnel.github.io/portfolio](https://gilesagnel.github.io/portfolio/#)
+My portfolio repository showcases my experience, skills and projects, built using Vue.js and Tailwind CSS.
+Feel free to take a look: gilesagnel.github.io/portfolio
